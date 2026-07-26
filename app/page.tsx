@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const navItems = [
   { label: "About", href: "#about" },
   { label: "Featured product", href: "#featured-product" },
@@ -9,15 +11,15 @@ export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <a className="brand" href="#top" aria-label="ARCAUR home">
-          <span className="brand-mark" aria-hidden="true">
-            <span className="brand-mark-line brand-mark-line-one" />
-            <span className="brand-mark-line brand-mark-line-two" />
-          </span>
-          <span className="brand-copy">
-            <span className="brand-name">ARCAUR</span>
-            <span className="brand-tagline">Supply for elevated stays.</span>
-          </span>
+        <a className="brand header-brand" href="#top" aria-label="ARCAUR home">
+          <Image
+            className="header-logo"
+            src="/arcaur-logo.png"
+            alt="ARCAUR — Supply for elevated stays."
+            width={92}
+            height={92}
+            priority
+          />
         </a>
 
         <nav className="site-nav" aria-label="Main navigation">
